@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fontPrimary), Arial, Helvetica, sans-serif;
+}
+:root {
+    --bgColor1: #302727;
+    --bgColor2: #ba2d2d;
+    --bgColor3: #f2511b;
+    --bgColor350: #f2511b82;
+    --bgColor4: #f2861b;
+    --bgColor5: #c7c730;
+    
+    --preta: black;
+    --branca: white;
+    --cinza: silver;
+
+    --fontPrimary: Roboto;
+    --fontSecondary: 'SUSE';
+    --fontTerciary: 'Protest Guerrilla';
+    
+    --spaceIn: 10px;
+    --spaceOut: 50px;
+}
+
+body, header, main, footer {
+    width: 100%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cinza);
+}
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spaceIn);
+}
+header, footer {
+    width: 100%;
+    padding: var(--spaceIn) 0;
+    color: var(--branca);
+    background-color: var(--bgColor2); 
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 99999;
+}
+header {
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+nav ul {
+    width: 100%;
+    padding-left: var(--spaceIn);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: var(--spaceIn);
+    cursor: pointer;
+}
+nav a {
+    color: var(--branca);
+    text-decoration: none;
+
+}
+
+table {
+    border-collapse: collapse;
+}
+td, th {
+    padding: var(--spaceIn);
+    color: var(--cinza);
+    width: 100px;
+    border: 1px solid black;
+}
+th {
+    color: var(--bgColor5);
+    background-color: var(--bgColor2);
+}
+td {
+    color: var(--preta);
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: var(--spaceIn);
+    border-bottom: 2px solid var(--rosa);
+    font-family: var(--fontSecondary);
+}
+button {
+    padding: 5px var(--spaceIn);
+    color: var(--branca);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+a:hover {
+    border-bottom: 1px solid var(--branca);
+}
+td:hover {
+    border-bottom: 3px solid gray;
+    background-color: var(--bgColor5);
+    cursor: pointer;
+}
+td:active {
+    background-color: var(--bgColor4);
+}

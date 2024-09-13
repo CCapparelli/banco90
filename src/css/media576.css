@@ -1,7 +1,6 @@
 .pagtoCards, .clientIn {
     flex-direction: column;
 }
-.clientIn img {
-    width: 50px;
-    height: 100px;
+.services img {
+    display: none;
 }

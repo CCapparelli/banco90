@@ -1,93 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-:root {
-    --bgColor1: #302727;
-    --bgColor2: #ba2d2d;
-    --bgColor3: #f2511b;
-    --bgColor4: #f2861b;
-    --bgColor5: #c7c730;
-    --preta: black;
-    --branca: white;
-    --spaceIn: 10px;
-    --spaceOut: 50px;
-}
-
-h3 {
-    padding: var(--spaceIn);
-    border-bottom: 2px solid var(--rosa);
-}
-button, .headerButton {
-    padding: 5px var(--spaceIn);
-    color: var(--branca);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-.bannerIn button, .headerButton {
-    margin-top: var(--spaceIn);
-    padding: var(--spaceIn);
-    border: 2px solid var(--bgColor2);
-    background-color: var(--bgColor1);
-}
-.headerButton {
-    background-color: var(--bgColor2);
-    border: 2px solid var(--branca);
-    margin: var(--spaceIn);
-}
-
-td, th {
-    padding: var(--spaceIn);
-    color: var(--branca);
-    width: 100px;
-    border: 1px solid black;
-}
-th {
-    color: var(--branca);
-    background-color: var(--bgColor2);
-}
-td {
-    color: var(--preta);
-    text-align: center;
-}
-
-td:hover {
-    border-bottom: 3px solid gray;
-    background-color: lightyellow;
-    cursor: pointer;
-}
-td:active {
-    background-color: lime;
-}
-
-
-body, header, main, footer, .banner, .bannerIn {
-    width: 100%;
-}
-body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-header, nav ul, footer, .banner, 
-.pagto, .pagtoCards, .pagtoCard, 
+.banner, .pagto, .pagtoCards, .pagtoCard, 
 .services, .client, .clientIn {
     width: 100%;
-    padding: var(--spaceIn);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    color: var(--branca);
-    background-color: var(--bgColor2);
-}
-header {
-    position: sticky;
-    top: 0;
 }
 
 .headerLeft {
@@ -97,73 +14,87 @@ header {
     gap: var(--spaceIn);
     align-items: center;
 }
+
+.bannerIn button, .headerButton {
+    margin-top: var(--spaceIn);
+    padding: var(--spaceIn);
+    border: 2px solid var(--bgColor5);
+    background-color: var(--bgColor1);
+}
+.headerButton {
+    background-color: var(--bgColor2);
+    border: 2px solid var(--branca);
+    margin: var(--spaceIn);
+}
+
 .banner {
     width: 100%;
-    height: 320px;
+    height: 400px;
     background-image: url("../img/banner.jpg");
     background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    /* se a imagem estivesse no HTML, 
+       eu teria que usar usar ...
+
+       overlfow-y: hidden;
+
+       ... para a imagem se adaptar à tela
+     */
     justify-content: start;
 }
 .bannerIn {
     width: 50%;
     color: var(--preta);
-    background-color: #f2861b;
-    opacity: 50%;
+    background-color: var(--bgColor350);
+    /* ou... 
+    background-color: var(--bgColor3);
+    opacity: 50%; 
+    */
     padding: var(--spaceIn);
+    cursor: default;
 }
 .bannerIn p {
     font-weight: bold;
     font-size: 11pt;
 }
 
-nav ul {
-    padding-left: var(--spaceIn);
-    list-style: none;
-    cursor: pointer;
-    gap: var(--spaceIn);
-}
-img {
-    cursor: pointer;
-}
-nav a {
-    color: var(--branca);
-    text-decoration: none;
-
-}
-main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spaceOut);
-}
-
 .pagto, .client {
     color: var(--preta);
     flex-direction: column;
-    background-color: var(--branca);
+    background-color: var(--cinza);
     gap: var(--spaceIn);
 }
 .pagtoCards, .clientIn {
     color: var(--preta);
-    background-color: var(--branca);
+    background-color: var(--cinza);
     justify-content: center;
     gap: var(--spaceIn)    
 }
+.pagtoCards {
+    margin-bottom: var(--spaceOut);
+}
 .pagtoCard {
     flex-direction: column;
-    background-color: var(--branca);
     width: 80px;
     color: var(--preta);
-    padding: 70px var(--spaceOut);
+    padding: var(--spaceOut);
     border: 2px solid var(--preta);
+    border-radius: var(--spaceIn);
     justify-items: center;
     align-items: center;
+    cursor: pointer;
 }
+.pagtoCard p {
+    padding-top: var(--spaceOut);
+    font-weight: bold;
+}
+
 .services {
     flex-direction: row;
     gap: var(--spaceOut);
     background-color: var(--bgColor1);
+    color: var(--cinza);
 }
 .servicesIn {
     margin: var(--spaceIn);
@@ -171,36 +102,50 @@ main {
 .services img {
     width: 40%;
 }
+
 .clientIn img {
-    width: 20%;
-    height: 300px;
+    width: 250px;
+    height: 250px;
+    border-radius: var(--spaceIn);
+    cursor: pointer;
 }
+
 .table {
     color: var(--preta);
+    margin: var(--spaceOut);
     padding: var(--spaceIn);
+    background-color: var(--branca);
     border: 1px solid var(--bgColor1);
     border-radius: var(--spaceIn);
     box-shadow: 8px 8px 8px var(--bgColor1);
-    margin: var(--spaceIn);
-}
-table {
-    border-collapse: collapse;
 }
 .table h2 {
     text-align: center;
     padding: var(--spaceIn);
 }
+
 th:empty {
     border: none;
     background-color: transparent;
 }
-footer {
-    padding: 0;
-    justify-content: center;
+.pagtoCard:hover {
+    background-color: var(--bgColor5);
+    animation: headShake;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
-a:hover {
-    text-decoration: underline;
+.clientIn img:hover {
+    animation: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 
-
-
+.bottomButtons {
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+}
+.bottomButtons a button {
+    color: var(--preta);
+    margin: 5px;
+}

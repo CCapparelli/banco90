@@ -2,8 +2,18 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="src/css/all.css">
     <link rel="stylesheet" href="src/css/index.css">
     <link rel="stylesheet" media="screen and  (max-width: 768px)" href="src/css/media576.css"> 
+    <!-- google fonts (Roboto & SUSE) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--  -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banco 90</title>
 </head>
@@ -13,25 +23,36 @@
             <img src="src/img/logoWhite.svg" alt="logo">
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>Ajuda</li>
-                    <li>Empréstimos</li>
-                    <li>Sua conta bancária</li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Ajuda</a></li>
+                    <li><a href="#">Empréstimos</a></li>
+                    <li><a href="#">Sua conta bancária</a></li>
                 </ul>
             </nav>
         </div>
         <button class="headerButton">Abra sua conta</button>
     </header>
 
+    <div class="bottomButtons">
+        <a href="#">
+            <button type="button">Topo</button>
+        </a>
+        <br>
+        <a href="#teste">
+            <button type="button">Pagto</button>
+        </a>
+    </div>
+
     <main>
-        <div class="banner">
+        <section class="banner">
             <div class="bannerIn">
                 <h3>SEJA BEM VINDO AO BANCO 90!</h3>
                 <p>Aqui você encontra o melhor serviço e atendimento do Brasil.</p>
                 <button class="bannerButton">Abra sua conta agora!</button>
             </div>
-        </div>
-        <div class="pagto">
+        </section>
+        
+        <section id="teste" class="pagto">
             <h3>ESCOLHA SUA FORMA DE PAGAMENTO PREFERIDA</h3>
             <div class="pagtoCards">
                 <div class="pagtoCard">
@@ -47,23 +68,26 @@
                     <p>DINHEIRO</p>
                 </div>
             </div>
-        </div>
-        <div class="services">
+        </section>
+        
+        <section class="services">
             <div class="servicesIn">
                 <h3>Contrate nossos serviços</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sit modi cupiditate assumenda blanditiis praesentium dolore! Tempore inventore natus aliquid quod perspiciatis unde perferendis repellendus. Nam mollitia cupiditate pariatur iure! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quasi quas praesentium obcaecati doloribus libero est soluta hic facere, cupiditate, vitae repudiandae! Perspiciatis dicta, animi quae nam optio quo itaque.</p>
             </div>
             <img src="src/img/bannerBeneficios.jpg" alt="services">
-        </div>
-        <div class="client">
+        </section>
+        
+        <section class="client">
             <h3>SEJA CLIENTE DE DIVERSAS MANEIRAS!</h3>
             <div class="clientIn">
                 <img src="src/img/cartaoUm.jpg" alt="img-1">
                 <img src="src/img/cartaoDois.jpg" alt="img-2">
                 <img src="src/img/cartaoTres.jpg" alt="img-3">
             </div>
-        </div>
-        <div class="table">
+        </section>
+        
+        <section class="table">
             <h2>Horários de atendimento</h2>
             <table>
                 <thead>
@@ -104,7 +128,7 @@
                 </tbody>
 
             </table>
-        </div>
+        </section>
     </main>
 
     <footer>
